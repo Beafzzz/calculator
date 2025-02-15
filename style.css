@@ -23,6 +23,7 @@ body, html{
 
 #display{
     padding: 20px;
+    text-align: right;
     width: 805px;
     border: none;
     border-radius: 33px;
