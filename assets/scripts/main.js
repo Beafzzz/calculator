@@ -6,8 +6,8 @@ function appendForEquation(value){
 }
 
 function deleteSymbol(){
-    const display = document.getElementById('display')
-    display.value = display.value.slice(0, -1)
+    equation = equation.slice(0, -1)
+    document.getElementById('display').value = equation
 }
 
 function deleteAll(){
@@ -16,6 +16,12 @@ function deleteAll(){
 }
 
 function calculatedYO(){
-    document.getElementById('display').value = eval(equation)
-    equation = ''
+    try{
+        document.getElementById('display').value = eval(equation)
+        equation = eval(equation)
+    }
+    catch{
+        document.getElementById('display').value = "Ошибка!"
+    }
 }
+
